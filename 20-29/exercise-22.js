@@ -1,15 +1,11 @@
-var ArrayHelperModule = require("../utils/utils");
+const ArrayHelperModule = require("../utils/utils");
 ArrayHelperModule.extendArray(Array);
 
 /*
 
-Zipping Arrays
+Exercise 23: Combine videos and bookmarks by index
 
-Sometimes we need to combine two arrays by progressively taking an item from each and combining the pair. If you visualize a zipper, where each side is an array, and each tooth is an item, you'll have a good idea of how the zip operation works.
-
-Exercise 21: Combine videos and bookmarks by index
-
-Use a for loop to traverse the videos and bookmarks array at the same time. For each video and bookmark pair, create a {videoId, bookmarkId} pair and add it to the videoIdAndBookmarkIdPairs array.
+Let's repeat exercise 21, but this time lets use your new zip() function. For each video and bookmark pair, create a {videoId, bookmarkId} pair.
 
 */
 
@@ -43,22 +39,18 @@ var videos = [
         "rating": 5.0,
       }
     ];
-var bookmarks = [
+  var bookmarks = [
       {id: 470, time: 23432},
       {id: 453, time: 234324},
       {id: 445, time: 987834}
     ];
-var counter;
-var videoIdAndBookmarkIdPairs = [];
-var length = Math.min(videos.length, bookmarks.length);
 
-for(counter = 0; counter < length; counter++) {
-  videoIdAndBookmarkIdPairs.push(
-    {
-      videoId: videos[counter].id,
-      bookmarkId: bookmarks[counter].id
-    }
-  )
-}
+// Solution
 
-console.log(videoIdAndBookmarkIdPairs)
+var result = Array.prototype.zip$(
+    videos,
+    bookmarks,
+    (video, bookmark) => ({videoId: video.id, bookmarkId: bookmark.id}))
+
+console.log(result)
+
