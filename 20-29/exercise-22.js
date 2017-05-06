@@ -2,14 +2,11 @@ const ArrayHelperModule = require("../utils/utils");
 ArrayHelperModule.extendArray(Array);
 
 /*
-
 Exercise 23: Combine videos and bookmarks by index
-
 Let's repeat exercise 21, but this time lets use your new zip() function. For each video and bookmark pair, create a {videoId, bookmarkId} pair.
-
 */
 
-var videos = [
+const videos = [
       {
         "id": 70111470,
         "title": "Die Hard",
@@ -39,18 +36,15 @@ var videos = [
         "rating": 5.0,
       }
     ];
-  var bookmarks = [
+  const bookmarks = [
       {id: 470, time: 23432},
       {id: 453, time: 234324},
       {id: 445, time: 987834}
     ];
 
 // Solution
-
-var result = Array.prototype.zip$(
+const result = Array.prototype.zip$(
     videos,
     bookmarks,
     (video, bookmark) => ({videoId: video.id, bookmarkId: bookmark.id}))
-
 console.log(result)
-
