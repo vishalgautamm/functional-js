@@ -1,7 +1,7 @@
 var ArrayHelperModule = require("../utils/utils");
 ArrayHelperModule.extendArray(Array);
 
-var movieLists = [
+const movieLists = [
       {
         name: "Instant Queue",
         videos : [
@@ -69,7 +69,6 @@ const result = movieLists
           title: video.title,
           boxart: boxart.url
         }))))
-
 console.log(result)
 
 
