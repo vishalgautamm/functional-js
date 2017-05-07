@@ -1,7 +1,7 @@
 var ArrayHelperModule = require("../utils/utils");
 ArrayHelperModule.extendArray(Array);
 
-var movieLists = [
+const movieLists = [
       {
         name: "New Releases",
         videos: [
