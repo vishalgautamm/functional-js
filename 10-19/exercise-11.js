@@ -9,7 +9,7 @@ You've managed to flatten a tree that's two levels deep, let's try for three! Le
 
 */
 
-var movieLists = [
+const movieLists = [
       {
         name: "Instant Queue",
         videos : [
