@@ -1,3 +1,3 @@
 # functional-js
 
-Solutions for various interactive excerises for learning Functional Javascriptgit
+Solutions for various interactive excerises for learning Functional Javascript
